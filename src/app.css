@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@plugin "daisyui";
+
+@theme {
+	--color-beige-400: #faebd7;
+	--color-gold: #8a733e;
+	--color-gold-opaque: rgba(138, 115, 62, 0.7);
+	--color-text-primary: rgb(0, 0, 0);
+}
