@@ -41,9 +41,9 @@
 				<li class="relative">
 					<a href={`/paintings/${image.id}`}>
 						<div
-							class="bg-gold-opaque absolute flex h-[34rem] w-full flex-wrap pt-20 opacity-0 transition duration-500 hover:opacity-100"
+							class="bg-gold-opaque absolute flex h-[34rem] w-full pt-20 text-center opacity-0 transition duration-500 hover:opacity-100"
 						>
-							<h1 class="px-10 text-6xl text-wrap text-white">{image.name}</h1>
+							<h1 class="mx-auto px-10 text-6xl text-wrap text-white">{image.name}</h1>
 						</div>
 					</a>
 					<img
@@ -62,7 +62,7 @@
 						<div
 							class="bg-gold-opaque absolute h-[34rem] w-full pt-20 opacity-0 transition duration-500 hover:opacity-100"
 						>
-							<h1 class="px-10 text-6xl text-wrap text-white">{image.name}</h1>
+							<h1 class="mx-auto px-10 text-6xl text-wrap text-white">{image.name}</h1>
 						</div>
 					</a>
 					<img
