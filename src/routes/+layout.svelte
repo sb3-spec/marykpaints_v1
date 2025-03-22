@@ -96,7 +96,7 @@
 			><img src={EtsyIcon} alt="Etsy Icon" class="h-10 w-10" /></a
 		>
 	</div>
-	<div class="py-10">@2025marykelleherpaints. All Rights Reserved</div>
+	<div class="py-10">@2025marykpaints. All Rights Reserved</div>
 </div>
 
 <style>
