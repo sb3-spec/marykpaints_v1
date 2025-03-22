@@ -21,7 +21,7 @@
 		class="bg-beige-400 flex w-screen flex-wrap justify-center gap-2 overflow-hidden pt-[40px] lg:mt-[84px] lg:w-full lg:justify-between"
 	>
 		<img
-			src={`http://127.0.0.1:8090/api/files/pbc_3607937828/${data.image.id}/${data.image.file_name}?token=`}
+			src={`https://pocketbase-production-7a10.up.railway.app/api/files/pbc_3607937828/${data.image.id}/${data.image.file_name}?token=`}
 			alt={data.image.name}
 			class="h-[500px] w-96 object-fill lg:h-[500px] lg:w-[550px]"
 		/>

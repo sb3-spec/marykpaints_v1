@@ -4,7 +4,7 @@ import PocketBase from 'pocketbase';
 import { POCKETBASE_PASSWORD } from '$env/static/private';
 
 export const load: PageServerLoad = async ({ params }) => {
-	const pb = new PocketBase('http://127.0.0.1:8090');
+	const pb = new PocketBase('https://pocketbase-production-7a10.up.railway.app');
 	await pb.collection('_superusers').authWithPassword('sheffira2@gmail.com', POCKETBASE_PASSWORD);
 	if (!params.slug) {
 		error(404, 'Image not found');

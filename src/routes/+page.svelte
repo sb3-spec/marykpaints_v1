@@ -47,7 +47,7 @@
 						</div>
 					</a>
 					<img
-						src={`http://127.0.0.1:8090/api/files/pbc_3607937828/${image.id}/${image.file_name}?token=`}
+						src={`https://pocketbase-production-7a10.up.railway.app/api/files/pbc_3607937828/${image.id}/${image.file_name}?token=`}
 						alt={image.name}
 						class="h-[30rem] w-[26rem] object-cover lg:h-[34rem] lg:w-[34rem]"
 					/>
@@ -66,7 +66,7 @@
 						</div>
 					</a>
 					<img
-						src={`http://127.0.0.1:8090/api/files/pbc_3607937828/${image.id}/${image.file_name}?token=`}
+						src={`https://pocketbase-production-7a10.up.railway.app/api/files/pbc_3607937828/${image.id}/${image.file_name}?token=`}
 						alt={image.name}
 						class="h-[30rem] w-[26rem] object-cover lg:h-[34rem] lg:w-[34rem]"
 					/>
