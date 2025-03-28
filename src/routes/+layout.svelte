@@ -61,7 +61,7 @@
 <!-- Mobile Nav -->
 <div class="drawer z-10 lg:hidden">
 	<input type="checkbox" id="sidebar" class="drawer-toggle" />
-	<div class="drawer-content">
+	<div class="drawer-content fixed right-0">
 		<label for="sidebar"><img src={HamburgerMenu} alt="Hamburger Icon" class="w-10 p-2" /></label>
 	</div>
 	<div class="drawer-side">
