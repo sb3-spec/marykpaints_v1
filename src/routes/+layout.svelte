@@ -10,7 +10,7 @@
 
 <!-- Desktop Nav -->
 <nav class="bg-beige-400 fixed top-0 right-0 left-0 z-10 hidden w-full text-4xl text-black lg:flex">
-	<div class="flex w-7/12 justify-between border-b-2 py-5 lg:mx-auto">
+	<div class="flex min-w-7/12 justify-between gap-20 border-b-2 py-5 lg:mx-auto">
 		<div class="flex gap-10">
 			<a href="/" class="group transition duration-300">
 				Home
