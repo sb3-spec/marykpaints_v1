@@ -9,7 +9,7 @@
 	let isMobile: boolean = $state(false);
 
 	onMount(() => {
-		isMobile = window?.innerWidth <= 1200;
+		isMobile = window?.innerWidth <= 650;
 	});
 	let images = data.images.flatMap((image) => {
 		return {
@@ -27,13 +27,13 @@
 		class="mx-auto h-screen w-full"
 	/>
 </div>
-<div class="flex h-screen w-full flex-col pt-[84px]">
-	<div class="mx-auto w-7/12 text-center text-5xl text-black lg:text-7xl">
+<div class="flex min-h-screen w-full flex-col pt-[84px]">
+	<div class="mx-auto w-9/12 text-center text-5xl text-black lg:w-7/12 lg:text-7xl">
 		<h1 class="mb-10 border-b-2 pb-8">Paintings</h1>
 	</div>
 
 	<div
-		class="relative flex h-[40rem] w-full overflow-hidden text-center whitespace-nowrap"
+		class="relative flex min-h-[30rem] w-full overflow-hidden text-center whitespace-nowrap"
 		id="container"
 	>
 		<ul class="absolute top-0 flex w-max gap-5 pl-[20px]" id="scroll-1">
@@ -73,21 +73,22 @@
 				</li>
 			{/each}
 		</ul>
-		<a
-			href="/paintings"
-			class="hover:bg-gold absolute right-0 bottom-0 left-0 mx-auto mt-4 w-64 border py-1 text-center text-4xl text-black transition duration-400 hover:text-white"
-			>More Work</a
-		>
 	</div>
+	<a
+		href="/paintings"
+		class="hover:bg-gold mx-auto mt-4 w-64 border text-center text-4xl text-black transition duration-400 hover:text-white"
+		>More Work</a
+	>
 </div>
 
+<!-- About Me -->
 <div class="pt-[84px]">
-	<div class="mx-auto w-7/12 text-center text-5xl text-black lg:text-7xl">
+	<div class="mx-auto w-9/12 text-center text-5xl text-black lg:w-7/12 lg:text-7xl">
 		<h1 class="mb-10 border-b-2 pb-8">About Me</h1>
 	</div>
 
 	<div class="flex w-full justify-center">
-		<p class="text-text-primary px-8 text-left text-3xl lg:w-7/12">
+		<p class="text-text-primary w-9/12 px-8 text-left text-3xl lg:w-7/12">
 			Hi, I’m Mary! I’m an acrylic and gouache painter based in Seattle, Washington. My art is
 			inspired by the tiny details in everyday life that often go unnoticed, like the shadows of
 			leaves on the sidewalk or the reflection of light on the surface of a lake. I use rich colors
@@ -98,7 +99,7 @@
 </div>
 
 <div class="flex w-full flex-col pt-[84px]">
-	<div class="mx-auto w-7/12 text-center text-black">
+	<div class="mx-auto w-9/12 text-center text-black lg:w-7/12">
 		<h1 class="text-5xl lg:text-7xl">Contact</h1>
 	</div>
 

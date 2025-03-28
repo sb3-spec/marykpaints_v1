@@ -80,7 +80,7 @@
 {@render children()}
 
 <!-- Footer -->
-<div class="text-text-primary mx-auto w-7/12 border-t-2 text-center">
+<div class="text-text-primary mx-auto w-9/12 border-t-2 text-center lg:w-7/12">
 	<h2 class="py-7 text-xl">marykelleher98@gmail.com</h2>
 	<div class="mx-auto flex w-fit justify-between gap-10">
 		<span>
