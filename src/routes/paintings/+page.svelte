@@ -4,11 +4,13 @@
 	let { data }: PageProps = $props();
 </script>
 
-<div class="min-w-screen pt-[84px] text-center">
-	<h1 class="text-text-primary mx-auto mb-10 border-b-2 pb-8 text-5xl lg:w-7/12 lg:text-7xl">
+<div class=" min-w-screen pt-[84px] text-center">
+	<h1
+		class="text-text-primary mx-auto mb-10 w-10/12 border-b-2 pb-8 text-5xl lg:max-w-[58rem] lg:min-w-7/12 lg:text-7xl"
+	>
 		Paintings
 	</h1>
-	<ul class="mx-auto flex flex-wrap justify-between gap-y-5 lg:w-7/12">
+	<ul class="mx-auto flex flex-wrap gap-2 lg:w-7/12">
 		{#each data.images as image}
 			<li class="relative sm:mx-auto">
 				<a href={`/paintings/${image.id}`}>
@@ -21,7 +23,7 @@
 				<img
 					src={`https://pocketbase-production-7a10.up.railway.app/api/files/pbc_3607937828/${image.id}/${image.file_name}?token=`}
 					alt={image.name}
-					class="h-[30rem] w-[26rem] object-cover lg:h-[34rem] lg:w-[34rem]"
+					class="object-cover"
 				/>
 			</li>
 		{/each}

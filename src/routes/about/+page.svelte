@@ -1,4 +1,4 @@
-<div class="h-[75vh] lg:mt-[84px] lg:h-[65.5vh]">
+<div class="h-min-[75vh] pb-2 lg:mt-[84px] lg:h-[65.5vh]">
 	<div class="mx-auto w-7/12 pt-10 text-center text-5xl text-black lg:text-7xl">
 		<h1 class="mb-10 border-b-2 pb-8">About Me</h1>
 	</div>
