@@ -14,24 +14,26 @@
 <div class="mg:w-screen mx-auto overflow-hidden sm:w-screen lg:h-[75vh] lg:w-7/12">
 	{#if isMobile}
 		<div>
-			<h1 class="text-text-primary mx-auto max-w-[15ch] text-left text-5xl">{data.image.name}</h1>
+			<h1 class="text-text-primary mx-auto max-w-[15ch] pt-10 text-left text-5xl">
+				{data.image.name}
+			</h1>
 		</div>
 	{/if}
 	<div
-		class="bg-beige-400 flex w-screen flex-wrap justify-center gap-2 overflow-hidden pt-[40px] lg:mt-[84px] lg:w-full lg:justify-between"
+		class="bg-beige-400 flex w-screen flex-wrap justify-center gap-2 overflow-hidden pt-[20px] lg:mt-[84px] lg:w-full lg:justify-between"
 	>
 		<img
 			src={`https://pocketbase-production-7a10.up.railway.app/api/files/pbc_3607937828/${data.image.id}/${data.image.file_name}?token=`}
 			alt={data.image.name}
 			class="h-[500px] w-96 object-fill lg:h-[500px] lg:w-[550px]"
 		/>
-		<div class="flex flex-col gap-10">
+		<div class="flex w-3/4 flex-col gap-10">
 			{#if !isMobile}
 				<div>
 					<h1 class="text-text-primary max-w-[16ch] text-6xl">{data.image.name}</h1>
 				</div>
 			{/if}
-			<div class="flex flex-col gap-5 sm:w-96 md:w-96">
+			<div class="flex flex-col gap-5">
 				<span class="text-text-primary min-w-fit">
 					<h1 class="text-4xl">Material</h1>
 					<h2 class="text-2xl">{data.image.materials}</h2>

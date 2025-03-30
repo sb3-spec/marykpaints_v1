@@ -6,7 +6,7 @@
 
 	let { data }: PageProps = $props();
 
-	let isMobile: boolean = $state(false);
+	let isMobile: boolean | undefined = $state();
 
 	onMount(() => {
 		isMobile = window?.innerWidth <= 650;
