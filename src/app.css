@@ -8,4 +8,6 @@
 	--color-gold: #8a733e;
 	--color-gold-opaque: rgba(138, 115, 62, 0.7);
 	--color-text-primary: rgb(0, 0, 0);
+
+	--breakpoint-mdlg: 2000px;
 }

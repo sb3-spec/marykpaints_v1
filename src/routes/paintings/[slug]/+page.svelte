@@ -7,30 +7,30 @@
 	let isMobile: boolean = $state(false);
 
 	onMount(() => {
-		isMobile = window?.innerWidth <= 1200;
+		isMobile = window?.innerWidth <= 700;
 	});
 </script>
 
-<div class="mg:w-screen mx-auto overflow-hidden sm:w-screen lg:h-[75vh] lg:w-7/12">
+<div class="mx-auto w-screen overflow-x-hidden pt-15 pb-10 lg:w-7/12">
 	{#if isMobile}
 		<div>
-			<h1 class="text-text-primary mx-auto max-w-[15ch] pt-10 text-left text-5xl">
+			<h1 class="text-text-primary mx-auto text-left text-5xl lg:max-w-[15ch]">
 				{data.image.name}
 			</h1>
 		</div>
 	{/if}
 	<div
-		class="bg-beige-400 flex w-screen flex-wrap justify-center gap-2 overflow-hidden pt-[20px] lg:mt-[84px] lg:w-full lg:justify-between"
+		class="bg-beige-400 lex-wrap flex w-screen basis-[100%] gap-2 overflow-hidden pt-[20px] md:mx-auto md:w-3/4 md:basis-[49%] lg:mt-[84px] lg:w-full lg:justify-between"
 	>
 		<img
 			src={`https://pocketbase-production-7a10.up.railway.app/api/files/pbc_3607937828/${data.image.id}/${data.image.file_name}?token=`}
 			alt={data.image.name}
-			class="h-[500px] w-96 object-fill lg:h-[500px] lg:w-[550px]"
+			class="object-fill md:h-[500px] md:w-96 lg:h-[500px] lg:w-[550px]"
 		/>
-		<div class="flex w-3/4 flex-col gap-10">
+		<div class="flex flex-col gap-10 lg:w-fit">
 			{#if !isMobile}
 				<div>
-					<h1 class="text-text-primary max-w-[16ch] text-6xl">{data.image.name}</h1>
+					<h1 class="text-text-primary text-5xl lg:max-w-[16ch] lg:text-6xl">{data.image.name}</h1>
 				</div>
 			{/if}
 			<div class="flex flex-col gap-5">
