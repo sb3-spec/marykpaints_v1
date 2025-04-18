@@ -24,16 +24,18 @@
 	<img
 		src={(!isMobile && heroCard) || mobileHeroCard}
 		alt="Mary Kelleher"
-		class="mx-auto h-screen w-full"
+		class="absolute right-0 left-0 mx-auto h-screen w-screen"
 	/>
 </div>
-<div class="flex w-full flex-col pt-[84px] lg:min-h-screen">
-	<div class="mx-auto w-9/12 text-center text-5xl text-black lg:w-7/12 lg:text-7xl">
+<div class="relative flex w-full flex-col overflow-hidden pt-[84px] lg:min-h-screen">
+	<div
+		class="mx-auto w-full px-(--mobile-padding) text-center text-5xl text-black lg:px-(--desktop-padding) lg:text-7xl"
+	>
 		<h1 class="mb-10 border-b-2 pb-8">Paintings</h1>
 	</div>
 
 	<div
-		class="relative flex min-h-[30rem] w-full overflow-hidden text-center whitespace-nowrap"
+		class="relative flex min-h-[30rem] w-screen overflow-hidden text-center whitespace-nowrap lg:min-h-[36rem]"
 		id="container"
 	>
 		<ul class="absolute top-0 flex w-max gap-5 pl-[20px]" id="scroll-1">
@@ -41,7 +43,7 @@
 				<li class="relative">
 					<a href={`/paintings/${image.id}`}>
 						<div
-							class="bg-gold-opaque absolute flex h-[34rem] w-full pt-20 text-center opacity-0 transition duration-500 hover:opacity-100"
+							class="bg-gold-opaque absolute flex h-[37rem] w-full pt-20 text-center opacity-0 transition duration-500 hover:opacity-100"
 						>
 							<h1 class="mx-auto px-10 text-6xl text-wrap text-white">{image.name}</h1>
 						</div>
@@ -49,7 +51,7 @@
 					<img
 						src={`https://pocketbase-production-7a10.up.railway.app/api/files/pbc_3607937828/${image.id}/${image.file_name}?token=`}
 						alt={image.name}
-						class="h-[30rem] w-[26rem] object-cover lg:h-[34rem] lg:w-[34rem]"
+						class="h-[30rem] w-[26rem] object-cover lg:h-[37rem] lg:w-[37rem]"
 					/>
 				</li>
 			{/each}
@@ -68,7 +70,7 @@
 					<img
 						src={`https://pocketbase-production-7a10.up.railway.app/api/files/pbc_3607937828/${image.id}/${image.file_name}?token=`}
 						alt={image.name}
-						class="h-[30rem] w-[26rem] object-cover lg:h-[34rem] lg:w-[34rem]"
+						class="h-[30rem] w-[26rem] object-cover lg:h-[36rem] lg:w-[36rem]"
 					/>
 				</li>
 			{/each}
@@ -82,13 +84,13 @@
 </div>
 
 <!-- About Me -->
-<div class="pt-[84px]">
-	<div class="mx-auto w-9/12 text-center text-5xl text-black lg:w-7/12 lg:text-7xl">
+<div class="w-full px-(--mobile-padding) pt-[84px] lg:px-(--desktop-padding)">
+	<div class="mx-auto text-center text-5xl text-black lg:text-7xl">
 		<h1 class="mb-10 border-b-2 pb-8">About Me</h1>
 	</div>
 
 	<div class="flex w-full justify-center">
-		<p class="text-text-primary w-10/12 px-8 text-left text-2xl lg:w-7/12 lg:text-3xl">
+		<p class="text-text-primary px-8 text-left text-2xl lg:text-3xl">
 			Hi, I’m Mary! I’m an acrylic and gouache painter based in Seattle, Washington. My art is
 			inspired by the tiny details in everyday life that often go unnoticed, like the shadows of
 			leaves on the sidewalk or the reflection of light on the surface of a lake. I use rich colors
@@ -99,7 +101,7 @@
 </div>
 
 <div class="flex w-full flex-col pt-[84px]">
-	<div class="mx-auto w-9/12 text-center text-black lg:w-7/12">
+	<div class="mx-auto text-center text-black">
 		<h1 class="text-5xl lg:text-7xl">Contact</h1>
 	</div>
 

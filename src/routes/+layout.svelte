@@ -7,14 +7,18 @@
 	import TikTokIcon from '$lib/assets/icons/tik-tok.png';
 	import ArrowIcon from '$lib/assets/icons/arrow.png';
 	let { children } = $props();
+
+	function closeSidebar() {
+		document.getElementById('sidebar')?.click();
+	}
 </script>
 
-<div class="min-h-screen">
+<div class="min-h-screen overflow-x-visible">
 	<!-- Desktop Nav -->
 	<nav
-		class="bg-beige-400 fixed top-0 right-0 left-0 z-10 hidden w-full text-4xl text-black lg:flex"
+		class="bg-beige-400 fixed top-0 right-0 left-0 z-10 hidden w-full px-(--desktop-padding) text-4xl text-black lg:flex"
 	>
-		<div class="flex min-w-7/12 justify-between gap-20 border-b-2 py-5 lg:mx-auto">
+		<div class="flex w-full justify-around border-b-2 py-5">
 			<div class="flex gap-10">
 				<a href="/" class="group transition duration-300">
 					Home
@@ -71,7 +75,12 @@
 		</div>
 		<div class="drawer-side">
 			<label for="sidebar" aria-label="close-sidebar" class="drawer-overlay"></label>
-			<ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4 text-3xl">
+			<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+			<!-- svelte-ignore a11y_click_events_have_key_events -->
+			<ul
+				class="menu bg-base-200 text-base-content min-h-full w-80 p-4 text-3xl"
+				onclick={closeSidebar}
+			>
 				<li><a href="/">Home</a></li>
 				<li><a href="/paintings">Portfolio</a></li>
 				<li><a target="_blank" href="https://www.etsy.com/shop/MaryKPaints">Shop</a></li>
@@ -85,7 +94,9 @@
 	{@render children()}
 
 	<!-- Footer -->
-	<div class="text-text-primary mx-auto w-5/6 border-t-2 text-center lg:w-7/12">
+	<div
+		class="text-text-primary mx-auto w-[90%] border-t-2 px-(--mobile-padding) text-center lg:w-[60%] lg:px-(--desktop-padding)"
+	>
 		<h2 class="py-7 text-xl">marykelleher98@gmail.com</h2>
 		<div class="mx-auto flex w-fit justify-between gap-10">
 			<span>

@@ -11,6 +11,8 @@ export const load: PageServerLoad = async () => {
 
 	await pb.collection('_superusers').authWithPassword('sheffira2@gmail.com', POCKETBASE_PASSWORD);
 	return {
-		images: await pb.collection('images').getFullList()
+		images: (await pb.collection('images').getFullList()).sort(
+			(a, b) => a.visibility - b.visibility
+		)
 	};
 };

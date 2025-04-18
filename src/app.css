@@ -10,4 +10,7 @@
 	--color-text-primary: rgb(0, 0, 0);
 
 	--breakpoint-mdlg: 2000px;
+	--breakpoint-xl: 1400px;
+	--desktop-padding: 20%;
+	--mobile-padding: 5%;
 }
