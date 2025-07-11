@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="overflow-x-hidden px-(--mobile-padding) py-[84px] text-center lg:px-(--desktop-padding)"
+	class="overflow-x-hidden px-(--mobile-padding) py-[100px] text-center lg:px-(--desktop-padding)"
 >
 	<h1
 		class="text-text-primary mx-auto mb-10 overflow-x-hidden border-b-2 pb-8 text-5xl lg:text-7xl"

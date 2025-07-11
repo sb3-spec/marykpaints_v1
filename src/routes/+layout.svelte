@@ -16,9 +16,9 @@
 <div class="min-h-screen overflow-x-visible">
 	<!-- Desktop Nav -->
 	<nav
-		class="bg-beige-400 fixed top-0 right-0 left-0 z-10 hidden w-full px-(--desktop-padding) text-4xl text-black lg:flex"
+		class="bg-beige-400 fixed top-0 right-0 left-0 z-10 hidden w-full px-(--mobile-padding) text-4xl text-black md:px-(--medium-padding) lg:flex xl:px-(--desktop-padding)"
 	>
-		<div class="flex w-full justify-around border-b-2 py-5">
+		<div class="flex w-full justify-around border-b-2 py-5 sm:gap-10">
 			<div class="flex gap-10">
 				<a href="/" class="group transition duration-300">
 					Home

@@ -27,7 +27,7 @@
 		<img
 			src={`https://pocketbase-production-7a10.up.railway.app/api/files/pbc_3607937828/${data.image.id}/${data.image.file_name}?token=`}
 			alt={data.image.name}
-			class="object-fill md:h-[500px] lg:h-[500px] lg:w-[550px]"
+			class="object-cover md:h-[500px] lg:h-[500px] lg:w-[550px]"
 		/>
 		<div class="flex w-fit flex-col gap-10">
 			{#if !isMobile}

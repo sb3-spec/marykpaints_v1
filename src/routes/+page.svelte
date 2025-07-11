@@ -1,10 +1,13 @@
 <script lang="ts">
-	import heroCard from '$lib/assets/Mary Kelleher Alt.png';
-	import mobileHeroCard from '$lib/assets/Mary KelleherMobile.png';
+	import heroCard from '$lib/assets/RoughWavesHeroPic.png';
+	import mobileHeroCard from '$lib/assets/MaryKPaintsMobileHero.png';
 	import { onMount } from 'svelte';
 	import type { PageProps } from './$types';
 
 	let { data }: PageProps = $props();
+
+	let innerHeight = 0;
+	let innerWidth = 0;
 
 	let isMobile: boolean | undefined = $state();
 
@@ -20,11 +23,20 @@
 	});
 </script>
 
-<div class="h-screen">
+svelte
+
+<div class="hero-small h-screen">
 	<img
-		src={(!isMobile && heroCard) || mobileHeroCard}
+		src={mobileHeroCard}
 		alt="Mary Kelleher"
-		class="absolute right-0 left-0 mx-auto h-screen w-screen"
+		class="absolute right-0 left-0 mx-auto h-screen w-screen object-cover"
+	/>
+</div>
+<div class="hero-large h-screen">
+	<img
+		src={heroCard}
+		alt="Mary Kelleher"
+		class="absolute right-0 left-0 mx-auto h-screen w-screen object-cover"
 	/>
 </div>
 <div class="relative flex w-full flex-col overflow-hidden pt-[84px] lg:min-h-screen">
@@ -84,7 +96,7 @@
 </div>
 
 <!-- About Me -->
-<div class="w-full px-(--mobile-padding) pt-[84px] lg:px-(--desktop-padding)">
+<div class="w-full px-(--mobile-padding) pt-[30px] lg:px-(--desktop-padding)">
 	<div class="mx-auto text-center text-5xl text-black lg:text-7xl">
 		<h1 class="mb-10 border-b-2 pb-8">About Me</h1>
 	</div>
@@ -133,5 +145,19 @@
 
 	#scroll-2 {
 		animation: loop-2 50s infinite linear;
+	}
+
+	.hero-small {
+		display: none;
+	}
+
+	@media (max-width: 800px) {
+		.hero-large {
+			display: none;
+		}
+
+		.hero-small {
+			display: block;
+		}
 	}
 </style>
